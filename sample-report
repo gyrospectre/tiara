@@ -1,0 +1,203 @@
+{
+    "TechniqueInfo": {
+        "T1003 (OS Credential Dumping)": [
+            "Suckfly used a signed credential-dumping tool to obtain victim account credentials.(Citation: Symantec Suckfly May 2016)"
+        ],
+        "T1003.001 (LSASS Memory)": [
+            "GALLIUM used a modified version of [Mimikatz](https://attack.mitre.org/software/S0002)"
+        ],
+        "T1003.002 (Security Account Manager)": [
+            "GALLIUM used \u003ccode\u003ereg\u003c/code\u003e commands to dump specific hives from the Windows Registry, such as the SAM hive, and obtain password hashes.(Citation: Cybereason Soft Cell June 2019)"
+        ],
+        "T1005 (Data from Local System)": [
+            "GALLIUM collected data from the victim's local system, including password hashes from the SAM hive in the Registry.(Citation: Cybereason Soft Cell June 2019)",
+            "Windigo has used a script to gather credentials in files left on disk by OpenSSH backdoors.(Citation: ESET ForSSHe December 2018)"
+        ],
+        "T1016 (System Network Configuration Discovery)": [
+            "GALLIUM used \u003ccode\u003eipconfig /all\u003c/code\u003e to obtain information about the victim network configuration. The group also ran a modified version of [NBTscan](https://attack.mitre.org/software/S0590)"
+        ],
+        "T1018 (Remote System Discovery)": [
+            "GALLIUM used a modified version of [NBTscan](https://attack.mitre.org/software/S0590)"
+        ],
+        "T1027 (Obfuscated Files or Information)": [
+            "GALLIUM used a modified version of [HTRAN](https://attack.mitre.org/software/S0040)"
+        ],
+        "T1027.002 (Software Packing)": [
+            "GALLIUM packed some payloads using different types of packers, both known and custom.(Citation: Cybereason Soft Cell June 2019)"
+        ],
+        "T1027.005 (Indicator Removal from Tools)": [
+            "GALLIUM ensured each payload had a unique hash, including by using different types of packers.(Citation: Cybereason Soft Cell June 2019)"
+        ],
+        "T1033 (System Owner/User Discovery)": [
+            "GALLIUM used \u003ccode\u003ewhoami\u003c/code\u003e and \u003ccode\u003equery user\u003c/code\u003e to obtain information about the victim user.(Citation: Cybereason Soft Cell June 2019)"
+        ],
+        "T1036.003 (Rename System Utilities)": [
+            "GALLIUM used a renamed cmd.exe file to evade detection.(Citation: Cybereason Soft Cell June 2019)"
+        ],
+        "T1041 (Exfiltration Over C2 Channel)": [
+            "GALLIUM used Web shells and [HTRAN](https://attack.mitre.org/software/S0040)"
+        ],
+        "T1046 (Network Service Discovery)": [
+            "Suckfly the victim's internal network for hosts with ports 8080, 5900, and 40 open.(Citation: Symantec Suckfly May 2016)"
+        ],
+        "T1047 (Windows Management Instrumentation)": [
+            "GALLIUM used WMI for execution to assist in lateral movement as well as for installing tools across multiple assets.(Citation: Cybereason Soft Cell June 2019)"
+        ],
+        "T1049 (System Network Connections Discovery)": [
+            "GALLIUM used \u003ccode\u003enetstat -oan\u003c/code\u003e to obtain information about the victim network connections.(Citation: Cybereason Soft Cell June 2019)"
+        ],
+        "T1053.005 (Scheduled Task)": [
+            "GALLIUM established persistence for [PoisonIvy](https://attack.mitre.org/software/S0012)"
+        ],
+        "T1059 (Command and Scripting Interpreter)": [
+            "Windigo has used a Perl script for information gathering.(Citation: ESET ForSSHe December 2018)"
+        ],
+        "T1059.001 (PowerShell)": [
+            "GALLIUM used PowerShell for execution to assist in lateral movement as well as for dumping credentials stored on compromised machines.(Citation: Cybereason Soft Cell June 2019)"
+        ],
+        "T1059.003 (Windows Command Shell)": [
+            "Suckfly have been command-line driven.(Citation: Symantec Suckfly May 2016)",
+            "GALLIUM used the Windows command shell to execute commands.(Citation: Cybereason Soft Cell June 2019)"
+        ],
+        "T1074.001 (Local Data Staging)": [
+            "GALLIUM compressed and staged files in multi-part archives in the Recycle Bin prior to exfiltration.(Citation: Cybereason Soft Cell June 2019)"
+        ],
+        "T1078 (Valid Accounts)": [
+            "Suckfly used legitimate account credentials that they dumped to navigate the internal victim network as though they were the legitimate account owner.(Citation: Symantec Suckfly May 2016)",
+            "GALLIUM leveraged valid accounts to maintain access to a victim network.(Citation: Cybereason Soft Cell June 2019)"
+        ],
+        "T1082 (System Information Discovery)": [
+            "Windigo has used a script to detect which Linux distribution and version is currently installed on the system.(Citation: ESET ForSSHe December 2018)"
+        ],
+        "T1083 (File and Directory Discovery)": [
+            "Windigo has used a script to check for the presence of files created by OpenSSH backdoors.(Citation: ESET ForSSHe December 2018)"
+        ],
+        "T1090 (Proxy)": [
+            "Windigo has delivered a generic Windows proxy Win32/Glubteta.M. [Windigo](https://attack.mitre.org/groups/G0124)"
+        ],
+        "T1090.002 (External Proxy)": [
+            "GALLIUM used a modified version of [HTRAN](https://attack.mitre.org/software/S0040)"
+        ],
+        "T1105 (Ingress Tool Transfer)": [
+            "GALLIUM dropped additional tools to victims during their operation, including portqry.exe, a renamed cmd.exe file, winrar, and [HTRAN](https://attack.mitre.org/software/S0040)"
+        ],
+        "T1133 (External Remote Services)": [
+            "GALLIUM has used VPN services, including SoftEther VPN, to access and maintain persistence in victim environments.(Citation: Cybereason Soft Cell June 2019)"
+        ],
+        "T1136.002 (Domain Account)": [
+            "GALLIUM created high-privileged domain user accounts to maintain access to victim networks.(Citation: Cybereason Soft Cell June 2019)"
+        ],
+        "T1189 (Drive-by Compromise)": [
+            "Windigo has distributed Windows malware via drive-by downloads.(Citation: ESET Windigo Mar 2014)"
+        ],
+        "T1190 (Exploit Public-Facing Application)": [
+            "GALLIUM exploited a publicly-facing servers including Wildfly/JBoss servers to gain access to the network.(Citation: Cybereason Soft Cell June 2019)"
+        ],
+        "T1505.003 (Web Shell)": [
+            "GALLIUM used Web shells to persist in victim environments and assist in execution and exfiltration.(Citation: Cybereason Soft Cell June 2019)"
+        ],
+        "T1518 (Software Discovery)": [
+            "Windigo has used a script to detect installed software on targeted systems.(Citation: ESET ForSSHe December 2018)"
+        ],
+        "T1550.002 (Pass the Hash)": [
+            "GALLIUM used dumped hashes to authenticate to other machines via pass the hash.(Citation: Cybereason Soft Cell June 2019)"
+        ],
+        "T1553.002 (Code Signing)": [
+            "Suckfly has used stolen certificates to sign its malware.(Citation: Symantec Suckfly March 2016)",
+            "GALLIUM has used stolen certificates to sign its tools including those from Whizzimo LLC.(Citation: Microsoft GALLIUM December 2019)"
+        ],
+        "T1560.001 (Archive via Utility)": [
+            "GALLIUM used WinRAR to compress and encrypt stolen data prior to exfiltration.(Citation: Cybereason Soft Cell June 2019)"
+        ],
+        "T1570 (Lateral Tool Transfer)": [
+            "GALLIUM has used [PsExec](https://attack.mitre.org/software/S0029)"
+        ],
+        "T1574.002 (DLL Side-Loading)": [
+            "GALLIUM used DLL side-loading to covertly load [PoisonIvy](https://attack.mitre.org/software/S0012)"
+        ],
+        "T1583.004 (Server)": [
+            "GALLIUM has used Taiwan-based servers that appear to be exclusive to [GALLIUM](https://attack.mitre.org/groups/G0093)"
+        ],
+        "T1588.002 (Tool)": [
+            "GALLIUM has used a variety of widely-available tools, which in some cases they modified to add functionality and/or subvert antimalware solutions.(Citation: Microsoft GALLIUM December 2019)"
+        ]
+    },
+    "FurtherReading": [
+        "http://www.symantec.com/connect/blogs/indian-organizations-targeted-suckfly-attacks",
+        "http://www.symantec.com/connect/blogs/suckfly-revealing-secret-life-your-code-signing-certificates",
+        "https://www.microsoft.com/security/blog/2019/12/12/gallium-targeting-global-telecom/",
+        "https://www.cybereason.com/blog/operation-soft-cell-a-worldwide-campaign-against-telecommunications-providers",
+        "https://www.welivesecurity.com/2014/03/18/operation-windigo-the-vivisection-of-a-large-linux-server-side-credential-stealing-malware-campaign/",
+        "https://www.welivesecurity.com/wp-content/uploads/2018/12/ESET-The_Dark_Side_of_the_ForSSHe.pdf"
+    ],
+    "Metadata": {
+        "Source": "https://blog.group-ib.com/apt41-world-tour-2021",
+        "CreatedAt": "2023-01-13T13:45:34.102371+11:00",
+        "SourceTechniques": [
+            "T1596",
+            "T1596.005",
+            "T1190",
+            "T1059",
+            "T1059.003",
+            "T1059",
+            "T1059.001",
+            "T1053",
+            "T1053.005",
+            "T1569",
+            "T1569.002",
+            "T1047",
+            "T1053",
+            "T1053.002",
+            "T1543",
+            "T1543.003",
+            "T1547",
+            "T1547.001",
+            "T1027",
+            "T1027.002",
+            "T1070",
+            "T1070.004",
+            "T1222",
+            "T1562",
+            "T1562.006",
+            "T1003",
+            "T1003.003",
+            "T1003",
+            "T1003.002",
+            "T1003",
+            "T1003.001",
+            "T1555",
+            "T1555.003",
+            "T1552",
+            "T1552.001",
+            "T1087",
+            "T1082",
+            "T1069",
+            "T1012",
+            "T1482",
+            "T1124",
+            "T1057",
+            "T1046",
+            "T1135",
+            "T1016",
+            "T1049",
+            "T1018",
+            "T1550",
+            "T1550.002",
+            "T1570",
+            "T1560",
+            "T1560.001",
+            "T1602",
+            "T1005",
+            "T1071",
+            "T1071.001",
+            "T1071",
+            "T1071.004",
+            "T1105",
+            "T1090",
+            "T1090.001",
+            "T1041"
+        ],
+        "SimilarityCutoff": 55,
+        "FreshnessCutoff": 1
+    }
+}
