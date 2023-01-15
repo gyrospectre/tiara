@@ -9,12 +9,12 @@ Why is this? The MITRE ATT&CK® framework has been widely adopted by the industr
 
 TIARA is an experiment to see what might be possible.
 
-Given input containing MITRE ATT&CK® techniques, it will attempt to generate information about how known threat actors use these techniques. This information is inteded to primarily assist with analysis of security alerts.
+Given input containing MITRE ATT&CK® techniques, it will attempt to generate information about how known threat actors use these techniques. This information is primarily intended to assist with the analysis of security alerts.
 
 It's a work in progress that will develop over time, hopefully to the point it can be added to [Squyre](https://github.com/gyrospectre/squyre). 
 
 ## Caveats
- - It's not intended to attribute activity. Attribution is hard!
+ - It's not intended to attribute activity. [Attribution is hard!](https://www.spgedwards.com/2014/11/whodunnit-apt-attribution-is-hard.html)
  - The only datasource used is the MITRE ATT&CK® group database (https://attack.mitre.org/groups/). This limits us to ~135, mainly state sponsored groups.
 
 ## How it works
@@ -64,13 +64,18 @@ INFO[0003] Found actor "Windigo" with an technique overlap of 57.142857%.
 INFO[0003] Success! Output saved to "report".           
 INFO[0003] All done.
 ```
-The output looks something like that in [sample-output](https://github.com/gyrospectre/tiara/sample-output).
+The output looks something like that in [sample-output](https://github.com/gyrospectre/tiara/sample-report).
 
 ## Todo
 
-After some time using this with real life data and tweaking, the plan is to add TIARA as an enrichment function to Squyre (https://github.com/gyrospectre/squyre).
+After some time using this with real life data and tweaking, the plan is to add TIARA as an enrichment function to Squyre (https://github.com/gyrospectre/squyre) - if any value can be realised.
 
 Time will tell, but I suspect that the MITRE database is not going to detailed enough for this use case. If this turns out to be the case, I'd like to explore adding support for TIP platforms like MISP, EclecticIQ etc.
+
+I'd also like to flip the logic and see what happens when you (like now,) look for groups with a minimum technique overlap, but then see what techniques *don't* overlap. Build a list and stack rank by occurrence - does this help us find activity that an actor may have performed but we didn't catch initally?
+
+## Interpreting the Output
+WIP
 
 ## Credit / Thanks
 Thanks to Vesselin Bontchev and [WhoDunit](https://gitlab.com/bontchev/whodunit), the seed that originally started me thinking about TIARA!
