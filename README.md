@@ -37,7 +37,7 @@ go build .
 ## Usage
 See `./tiara --help` for usage details.
 
-An example run, with an optional technique overlap of 59% applied, and groups not updated in the past year excluded:
+An example run, with an optional technique overlap of 55% applied, and groups not updated in the past year excluded:
 
 ```
 $ ./tiara -source https://blog.group-ib.com/apt41-world-tour-2021 -similarity 55 -freshness 1
