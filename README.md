@@ -64,7 +64,7 @@ INFO[0003] Found actor "Windigo" with an technique overlap of 57.142857%.
 INFO[0003] Success! Output saved to "report".           
 INFO[0003] All done.
 ```
-The output looks something like that in [sample-output](https://github.com/gyrospectre/tiara/sample-report).
+The output looks something like that in [sample-report](https://github.com/gyrospectre/tiara/blob/main/sample-report).
 
 ## Todo
 
